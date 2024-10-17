@@ -38,13 +38,12 @@ const SignUpForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-        // Use the full URL for the registration endpoint
-        await axios.post("https://drf-api-fantomen-82373067f7b7.herokuapp.com/dj-rest-auth/registration/", signUpData);
-        history.push("/signin");  // Redirect to the sign-in page after successful signup
+      await axios.post("/dj-rest-auth/registration/", signUpData);
+      history.push("/signin");
     } catch (err) {
-        setErrors(err.response?.data);  // Capture and set errors from the API response
+      setErrors(err.response?.data);
     }
-};
+  };
 
   return (
     <Row className={styles.Row}>
