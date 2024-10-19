@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 import axios from 'axios';
-import { axiosRes } from '../api/axiosDefaults';
+import { axiosRes, axiosReq } from '../api/axiosDefaults';
 import { useHistory } from 'react-router-dom';
 
 export const CurrentUserContext = createContext(); // Corrected: added parentheses
